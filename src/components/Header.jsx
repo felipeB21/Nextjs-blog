@@ -18,7 +18,7 @@ export default function Header() {
             <li>
               <Link
                 className="flex items-center gap-3 bg-neutral-700 py-1 px-3 rounded-lg hover:bg-neutral-950"
-                href="https://github.com/felipeB21"
+                href="https://github.com/felipeB21/Nextjs-blog"
                 target="_blank"
               >
                 GitHub <GitHubIcon />
