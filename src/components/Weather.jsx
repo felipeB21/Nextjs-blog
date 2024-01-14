@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import PinIcon from "./PinIcon";
 import Perfil from "../../public/perfil.jpeg";
 import Link from "next/link";
+import Loading from "./Loading";
 
 const links = [
   { name: "GitHub", url: "https://github.com/felipeB21" },
@@ -45,13 +46,13 @@ export default function Weather() {
   return (
     <div>
       {loading ? (
-        <div>Cargando...</div>
+        <Loading />
       ) : (
         <>
           <div className="flex items-center justify-between py-1 px-3 rounded-xl text-sm bg-neutral-700">
-            <p className="flex items-center gap-1">
-              <PinIcon /> {weatherData.location.name}
-            </p>
+            <div className="flex items-center gap-1">
+              <PinIcon /> <span>{weatherData.location.name}</span>
+            </div>
             <div className="flex items-center gap-3 bg-neutral-800 px-3 rounded-xl">
               <div className="flex items-center">
                 <Image
